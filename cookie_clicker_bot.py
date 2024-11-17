@@ -63,6 +63,7 @@ def accept_cookies_and_select_language(driver):
             EC.element_to_be_clickable((By.XPATH, accept_button_xpath))
         )
         accept_personal_data_button.click()
+        time.sleep(0.5)
         logger.info("Accepted personal data policy.")
     except (NoSuchElementException, TimeoutException):
         logger.warning("Accept personal data button not found.")
@@ -73,6 +74,7 @@ def accept_cookies_and_select_language(driver):
             EC.element_to_be_clickable((By.ID, 'langSelect-EN'))
         )
         language_button.click()
+        time.sleep(0.5)
         logger.info("Language set to English.")
     except (NoSuchElementException, TimeoutException):
         logger.warning("Language selection button not found.")
@@ -83,6 +85,7 @@ def accept_cookies_and_select_language(driver):
             EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div/a[1]'))
         )
         accept_cookies_button.click()
+        time.sleep(0.5)
         logger.info("Accepted footer cookies.")
     except (NoSuchElementException, TimeoutException):
         logger.info("Footer cookies acceptance not required.")
@@ -107,12 +110,14 @@ def import_latest_save(driver):
                 EC.element_to_be_clickable((By.ID, 'prefsButton'))
             )
             options_button.click()
+            time.sleep(0.5)
 
             # Click Import Save
             import_save_link = WebDriverWait(driver, WEBPAGE_LOAD_TIMEOUT).until(
                 EC.element_to_be_clickable((By.LINK_TEXT, 'Import save'))
             )
             import_save_link.click()
+            time.sleep(0.5)
 
             # Paste in textarea
             textarea = WebDriverWait(driver, WEBPAGE_LOAD_TIMEOUT).until(
@@ -125,9 +130,11 @@ def import_latest_save(driver):
                 EC.element_to_be_clickable((By.ID, 'promptOption0'))
             )
             load_button.click()
+            time.sleep(0.5)
 
             # Close options
             options_button.click()
+            time.sleep(0.5)
         except Exception as e:
             logger.error(f"Error during import save: {e}")
     else:
