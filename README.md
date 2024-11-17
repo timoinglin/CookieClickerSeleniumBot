@@ -2,6 +2,9 @@
 
 An advanced automation bot for [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/), built using Selenium WebDriver. This bot enhances your gameplay by automating cookie clicking, golden cookie collection, upgrade purchases, and game save management.
 
+
+**Note:** This bot is designed to assist with cookie farming while you're away. It is *not* a fully autonomous bot that plays through the entire game. This way, you can still enjoy the core fun of the game, such as planning your strategies, making legacy upgrades, and unlocking achievements. The bot simply ensures that your progress continues even when you're not actively playing.
+
 ## Features
 
 - **Automated Big Cookie Clicking**: Rapidly clicks the big cookie to maximize cookie production.
